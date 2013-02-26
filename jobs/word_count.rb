@@ -39,6 +39,6 @@ Wukong.processor(:reducer, Wukong::Processor::Accumulator) do
   end
 
   def finalize
-    yield [key, count].join("\t")
+    yield [key, count].join("\n")
   end
 end

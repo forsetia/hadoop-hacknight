@@ -1,20 +1,23 @@
 def go
   prev_key = nil
   key_total = 0
+  keyword = "thou"
   ARGF.each do |line|
     line = line.chomp
     # split key and value on space character
     words = line.split(/\s/)
 
-#should print thou and count of occurences.
-#currently prints one per occurence, rather than using a regex etc. 
+#should print thou and count of occurences on a line
 
 	words.each do |word| 
-		next unless word.downcase == "thou"
-		puts "#{word}\t1" if word.downcase == "thou"	
-    		#key_total += value.to_i
+		next unless word.downcase == keyword
 		key_total += 1;
   	end
+	
+	if key_total > 0
+		puts "#{keyword}\t1" 
+	end	
+	
 
     # check for new key
 #    if prev_key && key != prev_key && key_total > 0

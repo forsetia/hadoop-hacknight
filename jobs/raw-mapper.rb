@@ -1,6 +1,7 @@
 def go
   ARGF.each do |line|
     line = line.chomp
+	puts line
 #    fields = line.split("\t")
 	#song title = col 51.
   end
