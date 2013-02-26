@@ -1,10 +1,8 @@
 def go
   ARGF.each do |line|
     line = line.chomp
-    fields = line.split("\t")
-    for token in tokenize(fields[51])
-      puts "#{token}\t1" if acceptable?(token)
-    end
+#    fields = line.split("\t")
+	#song title = col 51.
   end
 end
 
