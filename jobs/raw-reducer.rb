@@ -4,13 +4,17 @@ def go
   ARGF.each do |line|
     line = line.chomp
     # split key and value on space character
-    (key, value) = line.split(/\s/)
+    words = line.split(/\s/)
 
 #should print thou and count of occurences.
 #currently prints one per occurence, rather than using a regex etc. 
 
 	words.each do |word| 
+		next unless word.downcase == "thou"
 		puts "#{word}\t1" if word.downcase == "thou"	
+    		#key_total += value.to_i
+		key_total += 1;
+  	end
 
     # check for new key
 #    if prev_key && key != prev_key && key_total > 0
@@ -27,11 +31,8 @@ def go
 #    elsif ! prev_key
 #      prev_key = key
 #
-#    end
-#
+    end
     # add to count for this current key
-    key_total += value.to_i
-  end
 end
 
 go
