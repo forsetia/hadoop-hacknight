@@ -3,6 +3,8 @@ def go
   key_total = 0
   keyword = "thou"
   ARGF.each do |line|
+
+    key_total = 0;
     line = line.chomp
     # split key and value on space character
     words = line.split(/\s/)
@@ -15,7 +17,7 @@ def go
   	end
 	
 	if key_total > 0
-		puts "#{keyword}\t1" 
+		puts "#{keyword}\t#{key_total}" 
 	end	
 	
 
